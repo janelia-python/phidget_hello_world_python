@@ -3,6 +3,7 @@ from Phidget22.Devices import *
 from Phidget22.Devices.Manager import *
 from Phidget22.Phidget import *
 
+import os
 import sys
 
 try:
