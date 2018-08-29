@@ -7,6 +7,10 @@ description: |
 grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: devmode # use 'strict' once you have the right plugs and slots
 
+apps:
+  phidget-hello-world-python:
+    command: phidget-hello-world-python
+
 parts:
   phidget-python:
     plugin: python
@@ -16,4 +20,4 @@ parts:
     plugin: python
     python-version: python3
     source: .
-    after: [setup]
+    after: [phidget-python]

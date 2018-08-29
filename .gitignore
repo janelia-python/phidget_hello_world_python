@@ -42,3 +42,7 @@ coverage.xml
 docs/_build/
 
 RELEASE-VERSION
+
+snap/
+*.snap
+*.tar.bz2
