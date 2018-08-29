@@ -1,0 +1,23 @@
+#+TITLE: phidget_hello_world_python
+#+AUTHOR: Peter Polidoro
+#+EMAIL: peterpolidoro@gmail.com
+
+* Package Information
+  - Author :: Peter Polidoro
+  - License :: BSD
+
+  This Python package (phidget_hello_world) creates a class named
+  PhidgetHelloWorld.
+
+* Example Usage
+
+  #+BEGIN_SRC python
+    from phidget_hello_world import PhidgetHelloWorld
+    dev = PhidgetHelloWorld() # Might automatically find devices if available
+  #+END_SRC
+
+* Installation
+
+** Setup PhidgetSBC
+
+   [[https://github.com/janelia-experimental-technology/phidgets_setup]]
