@@ -20,7 +20,7 @@ parts:
     stage-packages:
       - libusb-1.0-0-dev
     override-build: |
-      ./configure
+      ./configure --prefix=/usr
       make
       sudo make install
   phidget22-python:
