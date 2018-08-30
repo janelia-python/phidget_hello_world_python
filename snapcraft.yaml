@@ -1,4 +1,4 @@
-name: phidget-hello-world-python
+ name: phidget-hello-world-python
 version: '0.1'
 summary: Phidget HelloWorld python example.
 description: |
@@ -15,10 +15,14 @@ parts:
   libphidget22:
     plugin: make
     source: https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22.tar.gz
+    build-packages:
+      - build-essential
+    stage-packages:
+      - libusb-1.0-0-dev
     override-build: |
-     ./configure
-     make
-     sudo make install
+      ./configure
+      make
+      sudo make install
   phidget22-python:
     plugin: python
     python-version: python3
