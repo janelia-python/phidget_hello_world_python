@@ -1,4 +1,4 @@
- name: phidget-hello-world-python
+name: phidget-hello-world-python
 version: '0.1'
 summary: Phidget HelloWorld python example.
 description: |
