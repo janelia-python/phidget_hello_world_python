@@ -12,12 +12,16 @@ apps:
     command: bin/phidget-hello-world
 
 parts:
-  phidget-python:
+  libphidget22:
+    plugin: make
+    source: https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22.tar.gz
+  phidget22-python:
     plugin: python
     python-version: python3
     source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
+    after: [libphidget22]
   phidget-hello-world-python:
     plugin: python
     python-version: python3
     source: .
-    after: [phidget-python]
+    after: [phidget22-python]
