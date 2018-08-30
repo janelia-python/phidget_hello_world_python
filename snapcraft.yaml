@@ -15,8 +15,10 @@ parts:
   libphidget22:
     plugin: make
     source: https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22.tar.gz
-    prepare: |
-      ./configure
+    override-build: |
+     ./configure
+     make
+     sudo make install
   phidget22-python:
     plugin: python
     python-version: python3
