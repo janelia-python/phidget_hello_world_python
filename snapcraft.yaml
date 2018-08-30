@@ -23,6 +23,10 @@ parts:
       ./configure --prefix=/usr
       make
       sudo make install
+    stage:
+      - $binaries
+    prime:
+      - $binaries
   phidget22-python:
     plugin: python
     python-version: python3
