@@ -4,12 +4,12 @@ summary: Phidget HelloWorld python example.
 description: |
   Test snap installs with the Phidget HelloWorld python example.
 
-grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: devmode # use 'strict' once you have the right plugs and slots
+grade: devel
+confinement: devmode
 
 apps:
   phidget-hello-world-python:
-    command: phidget-hello-world-python
+    command: bin/phidget-hello-world
 
 parts:
   phidget-python:
