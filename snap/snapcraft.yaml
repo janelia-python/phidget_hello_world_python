@@ -30,15 +30,13 @@ parts:
     prime:
       - $libraries
   phidget22-python:
-    plugin: python
-    python-version: python3
+    plugin: nil
     source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
     override-build: |
       pip install pip --upgrade
       pip install .
-    after: [libphidget22]
+    after: [phidget-hello-world-python]
   phidget-hello-world-python:
     plugin: python
     python-version: python3
     source: .
-    after: [phidget22-python]
