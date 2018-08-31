@@ -19,18 +19,23 @@ parts:
       - build-essential
     stage-packages:
       - libusb-1.0-0-dev
-    override-build: |
+    override-pull: |
+      snapcraftctl pull
       ./configure --prefix=/usr
-      make
-      sudo make install
+    filesets:
+      libraries:
+        - usr/lib/libphidget*
     stage:
-      - $binaries
+      - $libraries
     prime:
-      - $binaries
+      - $libraries
   phidget22-python:
     plugin: python
     python-version: python3
     source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
+    # override-build: |
+    #   pip install pip --upgrade
+    #   pip install .
     after: [libphidget22]
   phidget-hello-world-python:
     plugin: python
