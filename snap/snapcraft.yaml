@@ -28,9 +28,12 @@ parts:
   #   prime:
   #     - $libraries
   phidget22-python:
-    plugin: python
-    python-version: python3
+    # plugin: python
+    # python-version: python3
+    plugin: dump
     source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
+    build-packages:
+      - python3-pip
     override-build: |
       pip3 install pip --upgrade
       pip3 install .
