@@ -35,7 +35,6 @@ parts:
     build-packages:
       - python3-pip
     override-build: |
-      pip3 install pip --upgrade
       pip3 install .
     filesets:
       libraries:
