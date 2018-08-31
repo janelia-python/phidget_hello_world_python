@@ -28,24 +28,24 @@ parts:
   #   prime:
   #     - $libraries
   phidget22-python:
-    plugin: python
-    python-version: python3
-    # plugin: nil
-    source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
+    # plugin: python
+    # python-version: python3
+    plugin: nil
+    # source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
     build-packages:
       - wget
       - unzip
-      # - python3-pip
-    # override-build: |
-    #   wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
-    #   unzip Phidget22Python.zip
-    #   cd Phidget22Python/
+      - python3-pip
     override-pull: |
       wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
       unzip Phidget22Python.zip
       cd Phidget22Python/
+    override-build: |
+      pip3 install .
+    #   wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
+    #   unzip Phidget22Python.zip
+    #   cd Phidget22Python/
     #   pip3 install pip --upgrade
-      # pip3 install .
     #   pip3 show -f Phidget222
     # filesets:
     #   libraries:
