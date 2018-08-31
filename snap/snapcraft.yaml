@@ -33,11 +33,10 @@ parts:
     source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
     # build-packages:
       # - python3-pip
-    override-pull: |
-      snapcraftctl pull
+    # override-pull: |
+    #   snapcraftctl pull
     override-build: |
-      echo "ls:"
-      ls
+      cd Phidget22Python
       snapcraftctl build
     #   wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
     #   unzip Phidget22Python.zip
