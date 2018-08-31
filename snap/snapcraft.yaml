@@ -33,25 +33,26 @@ parts:
     # plugin: nil
     # source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
     build-packages:
-      - wget
+      # - wget
       - unzip
-      # - python3-pip
+      - python3-pip
     # override-build: |
     #   wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
     #   unzip Phidget22Python.zip
     #   cd Phidget22Python/
     override-pull: |
-      wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
+      snapcraftctl pull
+      # wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
       unzip Phidget22Python.zip
       cd Phidget22Python/
     #   pip3 install pip --upgrade
     #   pip3 install .
     #   pip3 show -f Phidget222
-    filesets:
-      libraries:
-        - usr/*
-    prime:
-      - $libraries
+    # filesets:
+    #   libraries:
+    #     - usr/*
+    # prime:
+    #   - $libraries
   # phidget-hello-world-python:
   #   plugin: python
   #   python-version: python3
