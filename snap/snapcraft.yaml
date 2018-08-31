@@ -12,14 +12,18 @@ apps:
     command: bin/phidget-hello-world
 
 parts:
+  libusb:
+    plugin: nil
+    stage-packages:
+      -libusb-1.0.0-dev
   libphidget22:
     plugin: make
     source: https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22.tar.gz
-    build-packages:
-      - build-essential
-    stage-packages:
-      - libusb-1.0-0
-      - libusb-1.0-0-dev
+    # build-packages:
+    #   - build-essential
+    # stage-packages:
+    #   - libusb-1.0-0
+    #   - libusb-1.0-0-dev
     override-pull: |
       snapcraftctl pull
       ./configure --prefix=/usr
@@ -28,6 +32,7 @@ parts:
         - usr/lib/libphidget*
     prime:
       - $libraries
+    after: [libusb]
   phidget22-python:
     plugin: python
     python-version: python3
