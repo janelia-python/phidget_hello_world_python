@@ -43,7 +43,7 @@ parts:
       pip3 install .
     filesets:
       libraries:
-        - lib/*
+        - usr/*
     prime:
       - $libraries
   # phidget-hello-world-python:
