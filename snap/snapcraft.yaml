@@ -24,7 +24,8 @@ parts:
       ./configure --prefix=/usr
     filesets:
       libraries:
-        - usr/lib/libphidget*
+        # - usr/lib/libphidget*
+        - usr/lib/*
     prime:
       - $libraries
   phidget22-python:
@@ -33,12 +34,12 @@ parts:
     source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
     override-build: |
       cd Phidget22Python
-      echo "pwd:"
-      pwd
-      echo "ls:"
-      ls
+      # echo "pwd:"
+      # pwd
+      # echo "ls:"
+      # ls
       snapcraftctl build
-      pip3 install .
+      # pip3 install .
     filesets:
       libraries:
         - usr/*
