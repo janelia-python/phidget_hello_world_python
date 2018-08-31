@@ -30,7 +30,6 @@ parts:
   phidget22-python:
     plugin: python
     python-version: python3
-    plugin:
     source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
     override-build: |
       pip3 install pip --upgrade
