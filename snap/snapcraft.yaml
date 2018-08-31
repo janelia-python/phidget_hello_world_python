@@ -7,34 +7,30 @@ description: |
 grade: devel
 confinement: devmode
 
-# apps:
-#   phidget-hello-world-python:
-#     command: bin/phidget-hello-world
+apps:
+  phidget-hello-world-python:
+    command: bin/phidget-hello-world
 
 parts:
-  # libphidget22:
-  #   plugin: make
-  #   source: https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22.tar.gz
-  #   build-packages:
-  #     - build-essential
-  #   stage-packages:
-  #     - libusb-1.0-0-dev
-  #   override-pull: |
-  #     snapcraftctl pull
-  #     ./configure --prefix=/usr
-  #   filesets:
-  #     libraries:
-  #       - usr/lib/libphidget*
-  #   prime:
-  #     - $libraries
+  libphidget22:
+    plugin: make
+    source: https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22.tar.gz
+    build-packages:
+      - build-essential
+    stage-packages:
+      - libusb-1.0-0-dev
+    override-pull: |
+      snapcraftctl pull
+      ./configure --prefix=/usr
+    filesets:
+      libraries:
+        - usr/lib/libphidget*
+    prime:
+      - $libraries
   phidget22-python:
     plugin: python
     python-version: python3
     source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
-    # build-packages:
-      # - python3-pip
-    # override-pull: |
-    #   snapcraftctl pull
     override-build: |
       cd Phidget22Python
       echo "pwd:"
@@ -43,49 +39,12 @@ parts:
       ls
       snapcraftctl build
       pip3 install .
-    #   wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
-    #   unzip Phidget22Python.zip
-    #   cd Phidget22Python/
-    #   pip3 install . -v -v -v
-    #   pip3 install pip --upgrade
-    #   pip3 show -f Phidget222
     filesets:
       libraries:
-        - bin/*
-        - lib/*
         - usr/*
     prime:
       - $libraries
-  # phidget22-python:
-  #   # plugin: python
-  #   # python-version: python3
-  #   # plugin: dump
-  #   # source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
-  #   plugin: nil
-  #   build-packages:
-  #     - wget
-  #     - unzip
-  #     - python3-pip
-  #   override-build: |
-  #     wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
-  #     unzip Phidget22Python.zip
-  #     cd Phidget22Python/
-  #     pip3 install . -v -v -v
-  #   # override-pull: |
-  #   #   wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
-  #   #   unzip Phidget22Python.zip
-  #   #   cd Phidget22Python/
-  #   #   pip3 install pip --upgrade
-  #   #   pip3 show -f Phidget222
-  #   filesets:
-  #     libraries:
-  #       # - usr/*
-  #       - bin/*
-  #       - lib/*
-  #       - usr/*
-  #   prime:
-  #     - $libraries
-  # phidget-hello-world-python:
-  #   plugin: python
-  #   python-version: python3
-  #   source: .
+  phidget-hello-world-python:
+    plugin: python
+    python-version: python3
+    source: .
