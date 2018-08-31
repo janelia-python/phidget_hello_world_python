@@ -50,7 +50,9 @@ parts:
     filesets:
       libraries:
         # - usr/*
-        - *
+        - bin/*
+        - lib/*
+        - usr/*
     prime:
       - $libraries
   # phidget-hello-world-python:
