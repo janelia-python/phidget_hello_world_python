@@ -15,7 +15,7 @@ parts:
   libusb:
     plugin: nil
     stage-packages:
-      - libusb-1.0.0-dev
+      - libusb-1.0-0-dev
   libphidget22:
     plugin: make
     source: https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22.tar.gz
