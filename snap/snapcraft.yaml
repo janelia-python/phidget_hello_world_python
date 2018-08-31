@@ -43,10 +43,10 @@ parts:
       pip3 install .
     filesets:
       libraries:
-        - lib/python*
+        - lib/*
     prime:
       - $libraries
-  phidget-hello-world-python:
-    plugin: python
-    python-version: python3
-    source: .
+  # phidget-hello-world-python:
+  #   plugin: python
+  #   python-version: python3
+  #   source: .
