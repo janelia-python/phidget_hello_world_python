@@ -5,7 +5,7 @@ description: |
   Test snap installs with the Phidget HelloWorld python example.
 
 grade: devel
-confinement: devmode
+confinement: strict
 
 apps:
   phidget-hello-world-python:
@@ -19,11 +19,6 @@ parts:
   libphidget22:
     plugin: make
     source: https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22.tar.gz
-    # build-packages:
-    #   - build-essential
-    # stage-packages:
-    #   - libusb-1.0-0
-    #   - libusb-1.0-0-dev
     override-pull: |
       snapcraftctl pull
       ./configure --prefix=/usr
