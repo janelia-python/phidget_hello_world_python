@@ -33,7 +33,7 @@ parts:
     source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
     filesets:
       libraries:
-        - *Phidget22*
+        - lib/python*/site-packages/Phidget22*
     prime:
       - $libraries
   phidget-hello-world-python:
