@@ -25,16 +25,15 @@ parts:
     filesets:
       libraries:
         - usr/lib/libphidget*
-    # stage:
-    #   - $libraries
     prime:
       - $libraries
   phidget22-python:
     plugin: python
     python-version: python3
     source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
-    prime:
-      - lib
+    source-type: zip
+    # prime:
+    #   - lib
   phidget-hello-world-python:
     plugin: python
     python-version: python3
