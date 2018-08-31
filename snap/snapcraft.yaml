@@ -30,11 +30,14 @@ parts:
   phidget22-python:
     # plugin: python
     # python-version: python3
-    plugin: dump
+    plugin: nil
     source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
     build-packages:
+      - unzip
       - python3-pip
     override-build: |
+      unzip Phidget22Python.zip
+      cd Phidget22Python
       pip3 install .
     filesets:
       libraries:
