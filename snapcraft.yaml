@@ -36,9 +36,9 @@ parts:
     # override-build: |
     #   pip install pip --upgrade
     #   pip install .
-    after: [libphidget22]
+    # after: [libphidget22]
   phidget-hello-world-python:
     plugin: python
     python-version: python3
     source: .
-    after: [phidget22-python]
+    # after: [phidget22-python]
