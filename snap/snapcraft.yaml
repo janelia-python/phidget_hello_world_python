@@ -37,7 +37,12 @@ parts:
     #   snapcraftctl pull
     override-build: |
       cd Phidget22Python
+      echo "pwd:"
+      pwd
+      echo "ls:"
+      ls
       snapcraftctl build
+      pip3 install .
     #   wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
     #   unzip Phidget22Python.zip
     #   cd Phidget22Python/
