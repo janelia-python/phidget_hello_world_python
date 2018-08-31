@@ -38,8 +38,8 @@ parts:
       # pwd
       # echo "ls:"
       # ls
-      snapcraftctl build
-      # pip3 install .
+      # snapcraftctl build
+      pip3 install .
     filesets:
       libraries:
         - usr/*
