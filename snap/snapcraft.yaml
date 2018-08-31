@@ -40,7 +40,9 @@ parts:
       wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
       unzip Phidget22Python.zip
       cd Phidget22Python/
+      pip3 install pip --upgrade
       pip3 install .
+      pip3 show -f Phidget222
     filesets:
       libraries:
         - usr/*
