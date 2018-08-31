@@ -33,12 +33,12 @@ parts:
     plugin: python
     python-version: python3
     source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
-    # override-build: |
-    #   pip install pip --upgrade
-    #   pip install .
-    # after: [libphidget22]
+    override-build: |
+      pip install pip --upgrade
+      pip install .
+    after: [libphidget22]
   phidget-hello-world-python:
     plugin: python
     python-version: python3
     source: .
-    # after: [phidget22-python]
+    after: [phidget22-python]
