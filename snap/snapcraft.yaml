@@ -18,14 +18,14 @@ parts:
     build-packages:
       - build-essential
     stage-packages:
+      - libusb-1.0-0
       - libusb-1.0-0-dev
     override-pull: |
       snapcraftctl pull
       ./configure --prefix=/usr
     filesets:
       libraries:
-        # - usr/lib/libphidget*
-        - usr/lib/*
+        - usr/lib/libphidget*
     prime:
       - $libraries
   phidget22-python:
