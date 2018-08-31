@@ -34,11 +34,7 @@ parts:
     source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
     override-build: |
       cd Phidget22Python
-      # echo "pwd:"
-      # pwd
-      # echo "ls:"
-      # ls
-      # snapcraftctl build
+      snapcraftctl build
       pip3 install .
     filesets:
       libraries:
