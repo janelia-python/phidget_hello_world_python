@@ -31,9 +31,9 @@ parts:
     plugin: python
     python-version: python3
     # plugin: nil
-    source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
+    # source: https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
     build-packages:
-      # - wget
+      - wget
       - unzip
       # - python3-pip
     # override-build: |
@@ -41,7 +41,7 @@ parts:
     #   unzip Phidget22Python.zip
     #   cd Phidget22Python/
     override-pull: |
-      # wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
+      wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
       unzip Phidget22Python.zip
       cd Phidget22Python/
     #   pip3 install pip --upgrade
