@@ -37,3 +37,29 @@
      sudo snap connect phidget-hello-world-python:hardware-observe core:hardware-observe
      sudo snap connect phidget-hello-world-python:raw-usb core:raw-usb
    #+END_SRC
+
+**** Setup Python
+
+     #+BEGIN_SRC sh
+       sudo apt-get install -y python3 python3-venv
+       mkdir ~/venvs
+       python3 -m venv ~/venvs/phidget
+       echo 'source ~/venvs/phidget/bin/activate' >> ~/.bashrc
+       source ~/.bashrc
+       pip install pip --upgrade
+       mkdir ~/Downloads
+       cd ~/Downloads
+       wget https://www.phidgets.com/downloads/phidget22/libraries/any/Phidget22Python.zip
+       unzip Phidget22Python.zip
+       cd Phidget22Python/
+       pip install .
+     #+END_SRC
+
+**** Test Python
+
+     #+BEGIN_SRC sh
+       cd ~/Downloads
+       wget https://www.phidgets.com/downloads/phidget22/examples/python/Manager/Phidget22_HelloWorld_Python_Ex.zip
+       unzip Phidget22_HelloWorld_Python_Ex.zip -d Phidget22_HelloWorld_Python
+       python3 ./Phidget22_HelloWorld_Python/HelloWorld.py
+     #+END_SRC
