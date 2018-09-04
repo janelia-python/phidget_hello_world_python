@@ -34,5 +34,4 @@
 
   #+BEGIN_SRC sh
     sudo snap install phidget-hello-world-python*.snap --dangerous
-    sudo snap connect phidget-hello-world-python:raw-usb core:raw-usb
   #+END_SRC
