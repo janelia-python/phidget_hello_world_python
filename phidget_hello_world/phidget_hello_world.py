@@ -4,7 +4,6 @@ from Phidget22.Devices.Manager import *
 from Phidget22.Phidget import *
 
 import os
-import sys
 
 try:
     from pkg_resources import get_distribution, DistributionNotFound
@@ -79,13 +78,9 @@ def main():
     dev = PhidgetHelloWorld()
     dev.open()
     print("Phidget Simple Playground (plug and unplug devices)");
-    print("Press Enter to end anytime...");
-    character = sys.stdin.read(1)
-    #     dev.close()
-    # except:
-    #     print("Something bad happened!");
-    #     sys.exit(1)
-    sys.exit(0)
+    x = input("Press Any key to exit")
+    dev.close()
+
 # -----------------------------------------------------------------------------------------
 if __name__ == '__main__':
 

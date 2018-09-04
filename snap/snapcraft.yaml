@@ -2,7 +2,7 @@ name: phidget-hello-world-python
 version: '0.1'
 summary: Phidget HelloWorld python example.
 description: |
-  Test snap installs with the Phidget HelloWorld python example.
+  Phidget HelloWorld python example.
 
 grade: devel
 confinement: strict
@@ -10,6 +10,7 @@ confinement: strict
 apps:
   phidget-hello-world-python:
     command: bin/phidget-hello-world
+    plugs: [raw-usb]
 
 parts:
   libusb:

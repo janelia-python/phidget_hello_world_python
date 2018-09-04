@@ -13,4 +13,5 @@ License::
 
 Example Usage::
 
-    dev = PhidgetHelloWorld()
+    import phidget_hello_world
+    phidget_hello_world.main()

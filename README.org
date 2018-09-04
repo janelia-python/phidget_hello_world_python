@@ -12,8 +12,8 @@
 * Example Usage
 
   #+BEGIN_SRC python
-    from phidget_hello_world import PhidgetHelloWorld
-    dev = PhidgetHelloWorld() # Might automatically find devices if available
+    import phidget_hello_world
+    phidget_hello_world.main()
   #+END_SRC
 
 * Installation
