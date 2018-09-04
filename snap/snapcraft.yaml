@@ -1,5 +1,5 @@
 name: phidget-hello-world-python
-version: '0.1'
+version: '1.0.0'
 summary: Phidget HelloWorld python example.
 description: |
   Phidget HelloWorld python example.
@@ -11,18 +11,8 @@ apps:
   phidget-hello-world-python:
     command: bin/phidget-hello-world
     plugs:
-      - account-control
-      - bluetooth-control
-      - firewall-control
       - hardware-observe
-      - netlink-audit
-      - netlink-connector
-      - network
-      - network-bind
-      - network-control
-      - network-observe
-      - unity7
-      - x11
+      - raw-usb
 
 parts:
   libusb:
