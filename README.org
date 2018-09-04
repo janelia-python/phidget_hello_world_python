@@ -11,6 +11,14 @@
 
 * Example Usage
 
+** Shell
+
+  #+BEGIN_SRC sh
+    phidget-hello-world-python
+  #+END_SRC
+
+** Python
+
   #+BEGIN_SRC python
     import phidget_hello_world
     phidget_hello_world.main()
@@ -21,3 +29,10 @@
 ** Setup PhidgetSBC
 
    [[https://github.com/janelia-experimental-technology/phidgets_setup]]
+
+** Snap
+
+  #+BEGIN_SRC sh
+    sudo snap install phidget-hello-world-python*.snap --dangerous
+    sudo snap connect phidget-hello-world-python:raw-usb core:raw-usb
+  #+END_SRC
