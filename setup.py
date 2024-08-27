@@ -21,7 +21,7 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/janelia-pypi/phidget_hello_world_python',
+    url='https://github.com/janelia-python/phidget_hello_world_python',
 
     # Author details
     author='Peter Polidoro',
